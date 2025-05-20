@@ -23,7 +23,7 @@ void benchmark_write(const string& filename,size_t file_size_mb, size_t block_si
     auto start = chrono::high_resolution_clock::now();
 
     for(size_t i = 0; i < total_blocks; ++i) outfile.write(buffer.data(), block_size);
-    outfile.close();
+    // outfile.close();
 
     auto end = chrono::high_resolution_clock::now();
     double elapsed_sec = chrono::duration<double>(end-start).count();
